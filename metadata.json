@@ -1,0 +1,12 @@
+{
+  "name": "Tierno Host Info",
+  "description": "Host information: user, host and local IP",
+  "uuid": "tierno-host-info@tiernogalvan",
+  "shell-version": [
+    "45",
+    "46",
+    "47"
+  ],
+  "url": "https://github.com/tiernogalvan/gnome-extension-host-info",
+  "version": 2
+}
