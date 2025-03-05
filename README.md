@@ -8,17 +8,7 @@ Este repo es una extensión de Gnome Shell para mostrar en la barra superior est
 
 Para instalar, ejecutar el script `install.sh`.
 
-# Desarrollo
+Requisitos:
+- Gnome Shell 45 en adelante, usado desde Ubuntu 23.04.
 
-Guía para comenzar: <https://gjs.guide/extensions/development/creating.html>
-
-Flujo de trabajo:
-- Desarrollar código en `~/.local/share/gnome-shell/extensions/tierno-host-info@tiernogalvan`
-- Reiniciar el gestor gráfico para probar los cambios:
-  - Si estás en X11: pulsar `Alt+F2` > reset
-  - En Wayland: no soporta reset, cierra la sesión y vuelve a entrar.
-
-Para ver logs:
-```
-$ journalctl -f -o cat /usr/bin/gnome-shell
-```
+Si quieres modificarlo y hacer pruebas de desarrollo, mira <README-desarrollo.md>.
