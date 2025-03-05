@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 package='tierno-host-info.zip'
 
