@@ -6,7 +6,17 @@ Este repo es una extensión de Gnome Shell para mostrar en la barra superior est
 - Hostname
 - IP local
 
-Para instalar, ejecutar el script `install.sh`.
+Para instalar en el usuario actual:
+```
+$ ./install-user.sh
+```
+
+Para instalar para todos los usuarios del sistema:
+- **TODO**: falta más testing.
+```
+$ ./install-system.sh
+```
+Nota: esto hace visible la extensión a todos los usuarios, pero necesariamente ellos la deben activar manualmente. Sí que se debería activar automáticamente para los usuarios nuevos que se creen en el sistema a partir del script.
 
 Requisitos:
 - Gnome Shell 45 en adelante, usado desde Ubuntu 23.04.
