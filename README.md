@@ -11,4 +11,4 @@ Para instalar, ejecutar el script `install.sh`.
 Requisitos:
 - Gnome Shell 45 en adelante, usado desde Ubuntu 23.04.
 
-Si quieres modificarlo y hacer pruebas de desarrollo, mira <README-desarrollo.md>.
+Si quieres modificarlo y hacer pruebas de desarrollo, mira [README-desarrollo.md](README-desarrollo.md).
