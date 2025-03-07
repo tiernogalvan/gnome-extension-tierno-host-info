@@ -16,15 +16,22 @@ if [[ "$EUID" -ne 0 ]]; then
   die "ERROR: please run as root."
 fi
 
-mkdir -p /usr/share/gnome-shell/extensions/
-cd /usr/share/gnome-shell/extensions/
-git clone --depth 1 https://github.com/tiernogalvan/gnome-extension-tierno-host-info.git tierno-host-info@tiernogalvan
+extensions_dir='/usr/share/gnome-shell/extensions/'
+repo='tierno-host-info@tiernogalvan'
+mkdir -p $extensions_dir
+cd $extensions_dir
+if [[ -d $repo ]]; then
+  cd $repo
+  git pull
+else
+  git clone --depth 1 https://github.com/tiernogalvan/gnome-extension-tierno-host-info.git $repo
+fi
 
 mkdir -p /etc/dconf/db/local.d/
-cat <<EOF
+cat > /etc/dconf/db/local.d/00-tierno-extensions << EOF
 [org/gnome/shell]
 # List all extensions that you want to have enabled for all users
 enabled-extensions=['tierno-host-info@tiernogalvan']
-EOF> /etc/dconf/db/local.d/00-tierno-extensions
+EOF
 
 dconf update
