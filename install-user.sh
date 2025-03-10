@@ -15,3 +15,4 @@ mkdir -p ~/.local/share/gnome-shell/extensions/
 cd ~/.local/share/gnome-shell/extensions/
 git clone --depth 1 https://github.com/tiernogalvan/gnome-extension-tierno-host-info.git tierno-host-info@tiernogalvan
 gnome-extensions enable tierno-host-info@tiernogalvan
+echo "Done."
