@@ -11,8 +11,16 @@ if (( major_version < 45 )); then
   die "ERROR: Your gnome version is ${major_version}, but at least 45 is required. Aborting."
 fi
 
-mkdir -p ~/.local/share/gnome-shell/extensions/
-cd ~/.local/share/gnome-shell/extensions/
-git clone --depth 1 https://github.com/tiernogalvan/gnome-extension-tierno-host-info.git tierno-host-info@tiernogalvan
+extensions_dir='~/.local/share/gnome-shell/extensions/'
+repo='tierno-host-info@tiernogalvan'
+mkdir -p $extensions_dir
+cd $extensions_dir
+if [[ -d $repo ]]; then
+  cd $repo
+  git pull
+else
+  git clone --depth 1 https://github.com/tiernogalvan/gnome-extension-tierno-host-info.git $repo
+fi
+
 gnome-extensions enable tierno-host-info@tiernogalvan
 echo "Done."
